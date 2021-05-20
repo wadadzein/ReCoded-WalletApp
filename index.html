@@ -3,15 +3,71 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="./src/style.css">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+        <link rel="stylesheet" href="./src/style.css">
         <title>Wallet</title>
     </head>
     <body>
+        <div id="modal" class="modal fade">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Create New Wallet</h4>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="close" ></button>
+                    </div>
+                    <div class="modal-body">
+                        <form role = "form">
+                            <div class="form-group">
+                                <label class= "control-label">Wallet Name</label>
+                                <div>
+                                    <input id="walletName" type="text" class="form-control">
+                                </div>
+                                <hr class="divider">
+                            </div>
+                            <div class="form-group">
+                                <label class ="control-label">Currency</label>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="usdRadio>
+                                    <label class="form-check-label" for="usdRadio">
+                                      USD $
+                                    </label>
+                                  </div>
+
+                                  <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="lebaneseRadio" checked>
+                                    <label class="form-check-label" for="lebaneseRadio">
+                                      Lebanese Lira L.L
+                                    </label>
+                                </div>
+                                <hr class="divider">
+                            </div>
+                            <div class="form-group">
+                                <label class= "control-label">Balance</label>
+                                <div>
+                                    <input type="number" class="form-control" id="balance" />
+                                    <hr class="divider">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="contol-label">Description</label>
+                                <div>
+                                    <input type="text" class="form-control" id="desc"/>
+                                </div>
+                            </div>
+                        </form> 
+                        <!--Create Button inside Modal-->
+                        <div class="modal-footer">
+                            <button type = "submit" id="createBtnM" class="btn btn-danger">Create Wallet</button> 
+                        </div>
+                </div> <!-- modal content -->
+            </div> <!-- modal dialog -->
+        </div> <!-- modal -->
+
+        </div>
         <div class="container-fluid">
-            <div class="row gap-5">
+            <div class="row mb-5">
                 <div class="col navi">
-                    <h4 class= "ms-1 text-white">Wallet App</h4>
+                    <h4 class= "ms=1 text-white text-center text-md-start">Wallet App</h4>
                 </div>
             </div>
             <div class="row">
@@ -21,35 +77,11 @@
                 <h3 class = "display-5 text-center fw-normal">Ooops!</h3>
                 <p class = "fs-4 text-center">You have no Wallets... start by creating one</p>
                 <div class= "col d-flex justify-content-center">
-                    <button id = "create" class= "btn btn-danger">Create a Wallet</button>
+                    <button id = "create" class= "btn btn-danger" data-bs-toggle="modal" data-bs-target="#modal">Create a Wallet</button>
                 </div>
             </div>
-            <form>
-                <div class="row">
-                    <h4 class="display-6 mb-4">Create New Wallet</h4>
-                </div>
 
-                <div class="row">
-                    <div class="col-sm-3">
-                        <label for="walletName" class="form-label"> Wallet Name </label><br>
-                        <input id = "walletName" class="form-control" type="text"/>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-3">
-                        <p class="fs-6">Currency</p>
-                        <div class="form-check">
-                            <label class="form-check-label" for="currencyRadio1">USD $</label>
-                            <input id = "currencyRadio1" type="radio" class="form-check-input" />                    
-                        </div>
-                        <div class="form-check">
-                            <label class="form-check-label mb-2" for="currencyRadio2">Lebanese Lira L.L.</label>
-                            <input id = "currencyRadio2" type="radio" class="form-check-input" />                    
-                        </div>               
-                    </div>
-                </div>
-            </form>
-         </div>
          <script src= "./src/script.js"></script>
+         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
     </body>
 </html>

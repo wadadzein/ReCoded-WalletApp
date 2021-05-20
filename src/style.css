@@ -1,3 +1,8 @@
 .navi {
     background-color: #343A40;
 }
+
+.divider {
+    opacity: .2;
+    height: .5px !important;
+}
