@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./src/style.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+        <title>Wallet</title>
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="row gap-5">
+                <div class="col navi">
+                    <h4 class= "ms-1 text-white">Wallet App</h4>
+                </div>
+            </div>
+            <div class="row">
+                 <svg xmlns="http://www.w3.org/2000/svg" width="146" height="146" fill="currentColor" class="bi bi-wallet2" viewBox="0 0 16 16">
+                    <path d="M12.136.326A1.5 1.5 0 0 1 14 1.78V3h.5A1.5 1.5 0 0 1 16 4.5v9a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 13.5v-9a1.5 1.5 0 0 1 1.432-1.499L12.136.326zM5.562 3H13V1.78a.5.5 0 0 0-.621-.484L5.562 3zM1.5 4a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-13z"/>
+                </svg>
+                <h3 class = "display-5 text-center fw-normal">Ooops!</h3>
+                <p class = "fs-4 text-center">You have no Wallets... start by creating one</p>
+                <div class= "col d-flex justify-content-center">
+                    <button id = "create" class= "btn btn-danger">Create a Wallet</button>
+                </div>
+            </div>
+            <form>
+                <div class="row">
+                    <h4 class="display-6 mb-4">Create New Wallet</h4>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-3">
+                        <label for="walletName" class="form-label"> Wallet Name </label><br>
+                        <input id = "walletName" class="form-control" type="text"/>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <p class="fs-6">Currency</p>
+                        <div class="form-check">
+                            <label class="form-check-label" for="currencyRadio1">USD $</label>
+                            <input id = "currencyRadio1" type="radio" class="form-check-input" />                    
+                        </div>
+                        <div class="form-check">
+                            <label class="form-check-label mb-2" for="currencyRadio2">Lebanese Lira L.L.</label>
+                            <input id = "currencyRadio2" type="radio" class="form-check-input" />                    
+                        </div>               
+                    </div>
+                </div>
+            </form>
+         </div>
+         <script src= "./src/script.js"></script>
+    </body>
+</html>
